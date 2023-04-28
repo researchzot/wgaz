@@ -1,0 +1,21 @@
+- name: Install UFW
+  apt:
+    name: ufw
+    state: present
+  become: yes
+
+- name: Configure UFW
+  ufw:
+    rule: allow
+    port: '{{ item }}'
+    proto: tcp
+  with_items:
+    - 22
+    - 80
+    - 443
+  become: yes
+
+- name: Enable UFW
+  ufw:
+    state: enabled
+  become: yes

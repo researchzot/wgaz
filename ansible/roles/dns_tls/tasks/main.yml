@@ -1,0 +1,17 @@
+- name: Install Stubby
+  apt:
+    name: stubby
+    state: present
+  become: yes
+
+- name: Configure Stubby
+  template:
+    src: stubby.yml.j2
+    dest: /etc/stubby/stubby.yml
+  become: yes
+
+- name: Restart Stubby service
+  systemd:
+    name: stubby
+    state: restarted
+  become: yes

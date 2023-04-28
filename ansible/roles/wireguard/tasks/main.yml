@@ -1,0 +1,14 @@
+- name: Install WireGuard
+  apt:
+    name: wireguard
+    state: present
+  become: yes
+
+- name: Configure WireGuard
+  template:
+    src: wg0.conf.j2
+    dest: /etc/wireguard/wg0.conf
+    owner: root
+    group: root
+    mode: '0600'
+  become: yes

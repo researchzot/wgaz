@@ -1,0 +1,5 @@
+---
+- name: Set up user authentication API
+  hosts: api
+  roles:
+    - user_auth

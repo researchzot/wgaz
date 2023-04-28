@@ -1,0 +1,12 @@
+[Unit]
+Description=User Authentication API
+After=network.target
+
+[Service]
+User=api
+WorkingDirectory=/path/to/your/api
+ExecStart=/usr/bin/python3 /path/to/your/api/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
