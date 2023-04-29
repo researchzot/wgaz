@@ -1,0 +1,32 @@
+Summary
+
+1. Project Overview
+   - Repository: https://github.com/researchzot/wgaz
+   - Goal: Create a secure, automated, scalable, and minimalist WireGuard VPN infrastructure
+
+2. Project Components
+   - Terraform scripts for creating infrastructure
+   - Bash scripts for automating tasks
+   - API for managing user accounts, keys, and configurations
+   - Website for user interaction with invite tokens
+
+3. Prioritized Tasks
+   - Implement WireGuard VPN infrastructure using Terraform
+   - Design and implement the API
+   - Develop the website for user interaction
+
+4. Security and Privacy
+   - Avoid recording any personal information of users
+   - No knowledge of which traffic belongs to which user
+   - Use invite tokens for account creation during beta phase
+   - Use SSH keys instead of passwords for authentication
+   - Utilize Debian as the OS for better security and stability
+
+5. User Experience
+   - Config file available in QR code, text, and zip formats
+   - Future plans to develop a custom WireGuard client
+
+6. Documentation
+   - Update README.md to reflect the current state of the project
+   - Create Specification and Design documents
+
